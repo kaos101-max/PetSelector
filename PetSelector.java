@@ -9,8 +9,20 @@ public class PetSelector{
         String colors = scan.nextLine();
         String season;
         String name;
-        String pet;
-
-
-    }
+        
+        if (colors.toLowercase() == "red"){
+            if("aeiou" )
+        }
+        
+        
+        
+        //if ("abcdefghijklmnopqurstuvwxyz".indexOf(colors.substring(i,i+1).toLowercase()) >= 0)
+        //{
+            //System.out.println("Enter your favorite season (winter, spring, summer, fall):");
+            //season = userInput.nextLine();
+        //}
+        //else 
+        //{
+            //System.out.println("Error, please try again!");
+        //}
 }
