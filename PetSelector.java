@@ -10,8 +10,8 @@ public class PetSelector{
         String season;
         String name;
         
-        if (colors.toLowercase() == "red"){
-            if("aeiou" )
+        if (colors.toLowerCase() == "red"){
+        
         }
         
         
