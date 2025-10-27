@@ -1,4 +1,7 @@
-//Name: Diauske Watanabe
+//Project: Perfect Pet Selector
+//Name: Daisuke Watanabe
+//Date: 10/16/25
+//Description: This program matches people's pet they select by depending on their favorite color, season, and if their name starts with(out) vowels.
 import java.util.*;
 public class PetSelector{
     public static void main(String [] args){
@@ -7,39 +10,36 @@ public class PetSelector{
         //make a deceision, tell the user what they get!
         Scanner userInput = new Scanner (System.in);
         System.out.println("Enter your favorite color (Either red, blue, or green):");
-        String colors = userInput.nextLine();
+        String colors = userInput.nextLine().toLowerCase().trim();
 
         System.out.println("Also, enter your favorite season (Either spring, summer, fall, or winter):");
-        String season = userInput.nextLine();
+        String season = userInput.nextLine().toLowerCase().trim();
         
         System.out.println ("Enter your name here:");
-        String name;
+        String name = userInput.nextLine().toLowerCase().trim();
+        boolean startsWithVowel = "aeiou".indexOf(name.substring(0,1))>=0;
 
         //Starter for a pet
         String pet = "Pet Rock";
         
-        if (colors.equals("red") && season.equals("winter")){
-            pet = "panda";
-        }
         if (colors.equals("blue") && season.equals("fall")){
             pet = "alligator";
         }
-        if (colors.equals("green") && season.equals("winter")){
+        else if (colors.equals("blue") && season.equals("spring")){
+            pet = "ostrich";
+        }
+        else if (colors.equals("green") && season.equals("winter") && !startsWithVowel){
             pet = "giraffe";
+        }
+        else if (colors.equals("green") && !season.equals("fall"));
+        {
+            pet = "dog";
+        }
+        if (colors.equals("red") && season.equals("winter") && !startsWithVowel){
+            pet = "panda";
         }
             
         
         }
         
-        
-        
-        //if ("abcdefghijklmnopqurstuvwxyz".indexOf(colors.substring(i,i+1).toLowercase()) >= 0)
-        //{
-            //System.out.println("Enter your favorite season (winter, spring, summer, fall):");
-            //season = userInput.nextLine();
-        //}
-        //else 
-        //{
-            //System.out.println("Error, please try again!");
-        //}
 }
