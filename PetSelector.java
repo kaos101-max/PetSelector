@@ -20,7 +20,7 @@ public class PetSelector{
         boolean startsWithVowel = "aeiou".indexOf(name.substring(0,1))>=0;
 
         //Starter for a pet
-        String pet = "Pet Rock";
+        String pet = "pet Rock";
         
         if (colors.equals("blue") && season.equals("fall")){
             pet = "alligator";
@@ -50,7 +50,7 @@ public class PetSelector{
             pet = "axolotl";
         }
         else if (colors.equals("blue") && season.equals("winter")){
-            pet = "rock";
+            pet = "pet rock";
         }
         
         //Result of your selected pet.
