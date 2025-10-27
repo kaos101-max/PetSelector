@@ -31,12 +31,20 @@ public class PetSelector{
         else if (colors.equals("green") && season.equals("winter") && !startsWithVowel){
             pet = "giraffe";
         }
-        else if (colors.equals("green") && !season.equals("fall"));
-        {
+        else if (colors.equals("green") && !season.equals("fall")){
             pet = "dog";
         }
-        if (colors.equals("red") && season.equals("winter") && !startsWithVowel){
+        else if (colors.equals("green") && season.equals("summer") && !startsWithVowel){
+            pet = "dog";
+        }
+        else if (colors.equals("red") && season.equals("winter") && !startsWithVowel){
             pet = "panda";
+        }
+        else if (colors.equals("red") && season.equals("winter")){
+            pet = "porcupine";
+        }
+        else if (colors.equals("blue") && season.equals("summer")){
+            pet = "pony";
         }
             
         
