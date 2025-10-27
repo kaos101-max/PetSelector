@@ -9,13 +9,13 @@ public class PetSelector{
         //make sure the input is valid (Idiot proof!)
         //make a deceision, tell the user what they get!
         Scanner userInput = new Scanner (System.in);
-        System.out.println("Enter your favorite color (Either red, blue, or green):");
+        System.out.println("First, enter your favorite color (Either red, blue, or green):");
         String colors = userInput.nextLine().toLowerCase().trim();
 
-        System.out.println("Also, enter your favorite season (Either spring, summer, fall, or winter):");
+        System.out.println("Second, enter your favorite season (Either spring, summer, fall, or winter):");
         String season = userInput.nextLine().toLowerCase().trim();
         
-        System.out.println ("Enter your name here:");
+        System.out.println ("Finally, enter your name here:");
         String name = userInput.nextLine().toLowerCase().trim();
         boolean startsWithVowel = "aeiou".indexOf(name.substring(0,1))>=0;
 
@@ -46,8 +46,15 @@ public class PetSelector{
         else if (colors.equals("blue") && season.equals("summer")){
             pet = "pony";
         }
-            
+        else if (colors.equals("blue") && season.equals("winter") && !startsWithVowel){
+            pet = "axolotl";
+        }
+        else if (colors.equals("blue") && season.equals("winter")){
+            pet = "rock";
+        }
         
+        //Result of your selected pet.
+        System.out.println("Your perfect pet is: " + pet);
         }
         
 }
